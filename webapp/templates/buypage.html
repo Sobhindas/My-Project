@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+{% block title %}Buy Now{% endblock %}
+{% block main %}
+
+
+<p> <span>hello,{{variable}}</span></p><br>
+    <div class="checkdetails">
+        <div class="watchimage">
+               <img id="one" src="{{img.url}}">
+
+        <div class="watchdetails">
+                <p ><b>{{proname}}</b></p>
+                 <p >{{prodesc}}</p>
+                 <p >{{price}}</p>
+
+        </div>
+        <div class="inputform">
+        <form method="POST">
+            {% csrf_token %}
+            <input  type="text" name = "Buyer_Name" value="{{variable}}" class="checkoutinput"  >
+            <input type="text"  name = "Item_Name" value="{{proname}}" class="checkoutinput" >
+            enter quantity
+            <input type="number" min = "1" name ="Item_Quantity" value="Enter Quantity" required="" class="checkoutinput">
+            <input type="text"  name= "Price" value="{{price}}" class="checkoutinput" >
+            <input type="submit" value="Proceed to Checkout" class="checkoutinput">
+        </form>
+        </div>
+            </div>
+    </div>
+          {% if messages %}
+
+                {% for message in messages %}
+                 <p>{{ message }}</p>
+                {% endfor %}
+
+            {% endif %}
+
+
+
+
+
+
+
+{% endblock %}

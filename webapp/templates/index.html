@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{% block title %}Elegant Watches{% endblock %}</title>
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
+    <link href="/static/css/all.min.css" rel="stylesheet" />
+	<link href="/static/css/templatemo-style.css" rel="stylesheet" />
+	<style>
+		.demo{
+			  height:55px;
+    width:100px;
+    text-align:center;
+    text-decoration:none;
+    background-color: #2F956D;
+    color:mintcream;
+    text-decoration:none;
+    }
+    	.demo active{
+    	color:#00FFF;
+    	 background-color: #000FF;
+    	 }
+    .welcome{
+    	position:absolute;
+    	left:300px;
+    	text-align:center;
+    	font-color:blue;
+    }
+    .loginbutton{
+    	 margin-top:2px;
+	text-decoration:none;
+	color:white;
+	background:green;
+	text-align:center;
+	padding:8px ;
+	}
+    .register{
+    margin-top:2px;
+	text-decoration:none;
+	color:white;
+	background:blue;
+	text-align:center;
+	padding:8px ;
+		}
+	.login1{
+		position:relative;
+		margin-top:10px;
+
+
+		}
+	.men{
+		position:absolute;
+		margin-top:50px;
+		margin-left:100px;
+		text-align:center;
+	}
+	.women{
+		position:absolute;
+		margin-top:50px;
+		margin-left:600px;
+		right:400px;
+		text-align:center;
+	}
+	.section1{
+		background:"static/img/wall paper/002.png";
+		height:600px;
+		width:1199px;
+		margin-top:10px;
+		border-radius:20px;
+		}
+	.gallsection{
+		position:relative;
+		height:1000px;
+		width:1140px;
+		margin-top:50px;
+		background-color:;
+		}
+	.menbutton{
+	position:relative;
+	top:60px;
+	text-decoration:none;
+	color:white;
+	background:gray;
+	text-align:center;
+	padding-top:40px;
+	padding-left:80px;
+	padding-right:80px;
+	padding-bottom:40px;
+	border-radius:30px;
+	font-size:40px;
+	}
+	.womenbutton{
+	position:relative;
+	top:60px;
+	text-decoration:none;
+	color:white;
+	background:gray;
+	text-align:center;
+	padding-top:40px;
+	padding-left:80px;
+	padding-right:80px;
+	padding-bottom:40px;
+	border-radius:30px;
+	font-size:40px;
+	}
+	.coro{
+		position:relative;
+		margin-top:20px;
+		}
+	.name{
+		position:relative;
+		height:60px;
+		width:100%;
+		margin-top:20px;
+		background-color:green;
+		font-color:white;
+		}
+	.welnote{
+		color:white;
+		margin-left:5px;
+		}
+	.logoutbutton{
+		position:absolute;
+	top:0px;
+		right:0px;
+		padding-top:5px;
+		padding-left:5px;
+		padding-right:5px;
+		padding-bottom:5px;
+		border-radius:5px;
+		color:white;
+		background:orange;
+
+	}
+.newwelcome{
+	background-color:gray;
+	}
+#time{
+	position:relative;
+	}
+
+.flex{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	}
+.logintext{
+	margin-left:450px;
+	margin-bottom:30px;
+	}
+ul.cartitem{
+	padding:7px;
+	margin:15px;
+	background-color:orange;
+	}
+.checkdetails{
+	background-color:green;
+	background-radius:10px;
+	}
+.watchimage{
+		background-color:;
+	border-radius:0px;
+	padding-top:80px;
+	padding-left:80px;
+	padding-right:80px;
+	padding-bottom:80px;
+	}
+.watchdetails{
+	position:relative;
+	background-color:white;
+	float:right;
+	height:300px;
+	width:470px;
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+	font-color:white;
+	}
+.checkoutinput{
+	width:150px;
+	height:40px;
+	color:green;
+	border-radius:15px;
+	background-color:white;
+	}
+.inputform{
+	padding-top:50px;
+	padding-left:50px;
+	padding-right:50px;
+	padding-bottom:50px;
+	background-color:gray;
+	border-radius:15px;
+	}
+
+	</style>
+
+</head>
+<!--
+
+Simple House
+
+https://templatemo.com/tm-539-simple-house
+
+-->
+<body>
+
+	<div class="container">
+	<!-- Top box -->
+		<!-- Logo & Site Name -->
+		<div class="placeholder">
+			<div class="parallax-window" data-parallax="scroll" data-image-src="/static/img/wall paper/wall1.png">
+				<div class="tm-header">
+					<div class="row tm-header-inner">
+						<div class="col-md-6 col-12">
+							<img src="/static/img/simple-house-logo.png" alt="Logo" class="tm-site-logo" />
+							<div class="tm-site-text-box">
+								<h1 class="tm-site-title">Elegant</h1>
+								<h6 class="tm-site-description">The Moving Time</h6>
+							</div>
+						</div>
+						<nav class="col-md-6 col-12 tm-nav">
+							<ul class="tm-nav-ul">
+								<li class="tm-nav-li"><a href="{%url 'index'%}" class="tm-nav-link active">Home</a></li>
+								<li class="tm-nav-li"><a href="{%url 'products'%}" class="tm-nav-link">Products</a></li>
+								<li class="tm-nav-li"><a href="{%url 'about'%}" class="tm-nav-link">About</a></li>
+								<li class="tm-nav-li"><a href="{%url 'contact'%}" class="tm-nav-link">Contact</a></li>
+								<li class="tm-nav-li"><a href="{%url 'loginh'%}" class="tm-nav-link">Login</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="name">
+			<p class="welnote">Welcome Check out our new products {{variable}}</p>
+			{% if request.user.is_authenticated %}
+			<p class="logoutbutton"><a href="{%url 'logouth'%}">Logout</a></p>
+			{%endif%}
+
+		</div>
+			<main>{% block main %}
+					<div class="newwelcome"  >
+   			 		<p>Elegant The moving time</p>
+					  <img id="time1" src="/static/img/wall paper/wall1.png" class="flex" width="100%" />
+					</div>
+
+
+		  <! enter corousel here....>
+
+
+		  {% endblock %}
+		</main>
+
+      	</div>
+		<footer class="tm-footer text-center">
+			<p>Copyright &copy; Elegant Times
+
+            </p>
+		</footer>
+	</div>
+	<script src="/static/js/jquery.min.js"></script>
+	<script src="/static/js/parallax.min.js"></script>
+	<script  src="/static/js/scr.js"></script>
+</body>
+</html>

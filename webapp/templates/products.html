@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% block title %}Products{% endblock %}
+{% block main %}
+
+    <div class="section1">
+            <div class="men">
+                <img src="/static/img/001.png" alt="Image" class="img-fluid tm-person-img" /><br>
+                <a href="{%url 'analogmen'%}" class="menbutton">Gents</a>
+            </div>
+         <div class="women">
+                <img src="/static/img/002.png" alt="Image" class="img-fluid tm-person-img" /><br>
+                <a href="{%url 'analogwomen'%}" class="womenbutton">Ladies</a>
+            </div>
+    </div>
+{% endblock %}

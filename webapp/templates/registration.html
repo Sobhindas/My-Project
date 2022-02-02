@@ -1,0 +1,62 @@
+{% extends 'index.html' %}
+{% block title %}Registration{% endblock %}
+{% block main %}
+
+	<div class="login">
+		<main>
+			<header class="row tm-welcome-section">
+				<h2 class="col-12 text-center tm-section-title">Register</h2>
+				<p class="col-12 text-center">Sign Up to Continue</p>
+			</header>
+
+			<div class="logintext">
+				<div class="row1">
+					<div class="col-md-6">
+						<form  method="POST" action="{% url 'registration'%}" >
+							{%csrf_token%}
+
+					        <div class="form-group" >
+					          <input type="text" name="username" class="form-control" placeholder="Username" id="username" required="" />
+					        </div>
+                            <div class="form-group" >
+					          <input type="text" name="fname" class="form-control" placeholder="Firstname" id="fname" required="" />
+					        </div>
+                            <div class="form-group" >
+					          <input type="text" name="lname" class="form-control" placeholder="Lastname" id="lname" required="" />
+					        </div>
+                            <div class="form-group" >
+					          <input type="email" name="email" class="form-control" placeholder="email" id="email" required="" />
+					        </div>
+                            <div class="form-group" >
+					          <input type="password" name="pass1" class="form-control" placeholder="Enter a Password" id="pass1" required=""/>
+                            </div>
+					        <div class="form-group">
+					          <input type="password" name="pass2" class="form-control" placeholder=" Re-enter Password" id="pass2" required="" />
+					        </div>
+
+							<div class="form-group tm-d-flex">
+								 <button type="submit" class="loginbutton" >
+					            Register
+					          </button><br>
+								<a class=register href="{% url 'loginh'%}">Login</a>
+                            </div>
+						</form>
+							<div id="successmessage">
+							{% if messages %}
+            				<ul>
+               					 {% for message in messages %}
+                    				{{ message }}
+                   				 {% endfor %}
+            				</ul>
+        					{% endif %}
+							</div>
+					</div>
+
+				</div>
+			</div>
+        </main>
+	</div>
+
+
+
+{% endblock %}
